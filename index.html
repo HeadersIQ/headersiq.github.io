@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/HeadersIQ_logo_180.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preload" as="image" href="assets/images/hey-do-you-trust-your-data.png">
 
   <!-- IMPORTANT: bump version so the hero background shows -->
   <link rel="stylesheet" href="assets/style.css?v=10">
@@ -33,6 +34,23 @@
   </script>
 </head>
 <body>
+  <!-- First-visit intro overlay -->
+  <div id="intro-banner" class="intro-banner" hidden>
+    <div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+      <button class="intro-close" type="button" aria-label="Close intro">×</button>
+  
+      <img
+        src="assets/images/hey-do-you-trust-your-data.png"
+        alt="HEY — Do you trust your data? If not, do you want to quickly assess its quality?"
+        class="intro-img" loading="eager"
+      />
+  
+      <div class="intro-actions">
+        <button id="introDismiss" class="button primary" type="button">Enter site</button>
+        <a class="button" href="publications.html">See Publications</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Header / Nav goes first -->
   <header class="site-header">
@@ -130,4 +148,6 @@
   </footer>
   
 </body>
+
+  
 </html>
