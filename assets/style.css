@@ -66,13 +66,16 @@ a:hover{ text-decoration:underline }
 .hero-card img{ width:100%; height:auto; border-radius:14px }
 
 .hero--image{
-  position:relative; padding:84px 0 64px; color:#0b1220;
+  position:relative;
+  padding:84px 0 64px;
+  color:#0b1220;
   background:#eef3ff url("assets/images/Nasa-Gulf-Coast-at-night.webp") center/cover no-repeat;
-  min-height:360px; /* ensures you see the image */
+  min-height:520px; /* taller so the photo is visible */
 }
 .hero__overlay{
   position:absolute; inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.70),rgba(255,255,255,.92));
+  /* lighter overlay: shows the NASA image instead of washing it out */
+  background:linear-gradient(180deg, rgba(255,255,255,.25), rgba(255,255,255,.55));
 }
 .hero--image .container{ position:relative; z-index:1 }
 
