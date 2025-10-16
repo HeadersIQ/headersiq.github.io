@@ -1,0 +1,11 @@
+{
+  "name": "HeadersIQ",
+  "short_name": "HeadersIQ",
+  "icons": [
+    { "src": "assets/HeadersIQ_logo_192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/HeadersIQ_logo_512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
