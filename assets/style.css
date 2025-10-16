@@ -65,19 +65,26 @@ a:hover{ text-decoration:underline }
 .bullets{ color:var(--muted) }
 .hero-card img{ width:100%; height:auto; border-radius:14px }
 
+/* Compact hero with visible NASA background */
 .hero--image{
-  position:relative;
-  padding:84px 0 64px;
+  position: relative;
+  /* smaller vertical space */
+  padding: 56px 0 40px;
+  min-height: 380px;
+
   color:#0b1220;
-  /* anchor to the bright shoreline; show more area */
-  background: #eef3ff url("assets/images/Nasa-Gulf-Coast-at-night.webp") center bottom / cover no-repeat;
-  min-height: 640px;
+  /* shift crop toward the brighter coastline; try right/center/bottom variants */
+  background: #eef3ff url("assets/images/Nasa-Gulf-Coast-at-night.webp")
+              center 80% / cover no-repeat;
 }
+
 .hero__overlay{
   position:absolute; inset:0;
-  /* lighter overlay: shows the NASA image instead of washing it out */
-  background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.28));
+  /* lighter overlay so the image peeks through */
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.22));
 }
+
+/* keep this — it stacks content above the background */
 .hero--image .container{ position:relative; z-index:1 }
 
 /* Layout blocks */
