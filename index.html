@@ -19,7 +19,7 @@
 
   <!-- IMPORTANT: bump version so the hero background shows -->
   <link rel="stylesheet" href="assets/style.css?v=10">
-  <script src="assets/site.js?v=2"></script>
+  <script src="assets/site.js?v=3" defer></script>
 
   <script type="application/ld+json">
   {
@@ -51,6 +51,29 @@
       </div>
     </div>
   </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const KEY = 'hiq_intro_seen_v1';
+    const root = document.getElementById('intro-banner');
+    if (!root) return;
+  
+    const show = () => { root.hidden = false; document.body.style.overflow = 'hidden'; };
+    const hide = () => { root.hidden = true;  document.body.style.overflow = '';    };
+  
+    // show only on first visit
+    if (!localStorage.getItem(KEY)) show();
+  
+    // wire buttons
+    root.querySelector('.intro-close')?.addEventListener('click', () => { localStorage.setItem(KEY,'1'); hide(); });
+    document.getElementById('introDismiss')?.addEventListener('click', () => { localStorage.setItem(KEY,'1'); hide(); });
+  
+    // close on backdrop click or ESC
+    root.addEventListener('click', (e) => { if (e.target === root) { localStorage.setItem(KEY,'1'); hide(); } });
+    document.addEventListener('keydown', (e) => { if (!root.hidden && e.key === 'Escape') { localStorage.setItem(KEY,'1'); hide(); }});
+  });
+  </script>
+
 
   <!-- Header / Nav goes first -->
   <header class="site-header">
