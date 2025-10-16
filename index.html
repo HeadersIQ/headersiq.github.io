@@ -16,11 +16,10 @@
   <link rel="apple-touch-icon" href="assets/HeadersIQ_logo_180.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!-- cache-bust the stylesheet to ensure the NASA hero shows -->
-  <link rel="stylesheet" href="assets/style.css?v=6">
+  <!-- IMPORTANT: bump version so the hero background shows -->
+  <link rel="stylesheet" href="assets/style.css?v=7">
   <script src="assets/site.js?v=2"></script>
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,21 +27,14 @@
     "name": "HeadersIQ",
     "url": "https://headersiq.github.io/",
     "description": "Attribute-centric data quality and semantic type detection research.",
-    "creator": {
-      "@type": "Person",
-      "name": "Marcelo Valentim Silva",
-      "affiliation": "Curtin University"
-    },
-    "sameAs": [
-      "https://github.com/HeadersIQ",
-      "https://github.com/HeadersIQ/HeadersIQ-main"
-    ]
+    "creator": { "@type": "Person", "name": "Marcelo Valentim Silva", "affiliation": "Curtin University" },
+    "sameAs": ["https://github.com/HeadersIQ","https://github.com/HeadersIQ/HeadersIQ-main"]
   }
   </script>
 </head>
 <body>
 
-  <!-- Header / Nav -->
+  <!-- Header / Nav goes first -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="HeadersIQ home">
@@ -59,11 +51,11 @@
     </div>
   </header>
 
-  <!-- HERO with NASA background -->
+  <!-- SINGLE HERO with NASA background -->
   <section class="hero hero--image">
     <div class="hero__overlay"></div>
     <div class="container">
-      <a class="brand" href="index.html" aria-label="HeadersIQ home" style="margin-bottom:6px; display:inline-flex;">
+      <a class="brand" href="index.html" aria-label="HeadersIQ home" style="margin-bottom:6px;display:inline-flex">
         <img class="brand-mark" src="assets/HeadersIQ_logo_32.png"
              srcset="assets/HeadersIQ_logo_32.png 1x, assets/HeadersIQ_logo_64.png 2x"
              alt="HeadersIQ logo" width="28" height="28">
@@ -79,11 +71,6 @@
         <a class="button" href="videos.html#notebooklm-audio">Listen: 15-min excellent conversation overview!!</a>
         <a class="button" href="https://github.com/HeadersIQ/HeadersIQ-main" target="_blank" rel="noopener">Source Code</a>
       </div>
-      <ul class="bullets">
-        <li><strong>Explainable:</strong> small, clear type set (~23+) + bounded numerics.</li>
-        <li><strong>Proven at scale:</strong> <em>50 datasets / 922 columns</em>.</li>
-        <li><strong>Finds what profilers miss:</strong> flagged <em>81</em> hidden-missing cases vs <em>1</em> by a popular profiler.</li>
-      </ul>
     </div>
   </section>
 
@@ -146,9 +133,8 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/site.js?v=2"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-WZLxE8GOD9nA6mQx6yU/1hEwWm4m5mD4i1hQn9Tn5wqI6V5m1uD6jQ6rV3vKp9dG7n7a7V8Xh+Jr4mR3+4W9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     (function(){
       var el = document.getElementById('qr');
