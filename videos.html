@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Videos & Audio - HeadersIQ</title>
+  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="HeadersIQ - Attribute-centric data quality research (semantic type detection, HeadersIQ metric, datasets, publications, videos)." />
+<meta property="og:title" content="HeadersIQ - Research Hub" />
+<meta property="og:description" content="Papers, code, videos, and audio for HeadersIQ by Marcelo Valentim Silva." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/og-card.png" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="assets/style.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "HeadersIQ",
+  "url": "https://headersiq.github.io/",
+  "description": "Attribute-centric data quality and semantic type detection research.",
+  "creator": {
+    "@type": "Person",
+    "name": "Marcelo Valentim Silva",
+    "affiliation": "Curtin University"
+  },
+  "sameAs": [
+    "https://github.com/HeadersIQ",
+    "https://github.com/HeadersIQ/HeadersIQ-main"
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="HeadersIQ home">
+      <span class="logo">HIQ</span>
+      <span class="brand-text">HeadersIQ</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="videos.html">Videos & Audio</a>
+      <a href="about.html">About</a>
+      <a class="button primary" href="https://github.com/HeadersIQ/HeadersIQ-main" target="_blank" rel="noopener">Code</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <h1>Videos & Audio</h1>
+  <p>Conference talks, demos, and audio summaries (e.g., NotebookLM). Replace the placeholders below with your own links.</p>
+
+  <div class="media-grid">
+    <div class="card">
+      <h3>BDCAT 2024 - Talk Recording</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="BDCAT 2024 Talk" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="meta">YouTube • 2024</p>
+    </div>
+
+    <div class="card">
+      <h3>NotebookLM - Paper Audio Summary</h3>
+      <audio controls preload="none">
+        <source src="assets/sample-audio.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <p class="meta">Upload your exported MP3/WAV from NotebookLM to <code>assets/</code> and update the path.</p>
+    </div>
+
+    <div class="card">
+      <h3>Upcoming Presentation - 2025</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" title="Upcoming Talk" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="meta">YouTube • 2025</p>
+    </div>
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>HeadersIQ</h4>
+        <p>Attribute-centric data quality research by Marcelo Valentim Silva.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/HeadersIQ" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.kaggle.com" target="_blank" rel="noopener">Kaggle</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>QR to this site</h4>
+        <div id="qr" aria-label="QR code linking to this site"></div>
+        <small>Point your phone camera to open this homepage.</small>
+      </div>
+    </div>
+    <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-WZLxE8GOD9nA6mQx6yU/1hEwWm4m5mD4i1hQn9Tn5wqI6V5m1uD6jQ6rV3vKp9dG7n7a7V8Xh+Jr4mR3+4W9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  (function(){
+    var el = document.getElementById('qr');
+    if (!el) return;
+    var base = location.origin + location.pathname.replace(/[^\/]*$/, 'index.html');
+    new QRCode(el, { text: base, width: 96, height: 96 });
+  })();
+</script>
+
+</body>
+</html>
