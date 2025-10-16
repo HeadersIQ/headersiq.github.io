@@ -68,14 +68,13 @@ a:hover{ text-decoration:underline }
 .hero--image{
   position:relative; padding:84px 0 64px; color:#0b1220;
   background:#eef3ff url("assets/images/Nasa-Gulf-Coast-at-night.webp") center/cover no-repeat;
+  min-height:360px; /* ensures you see the image */
 }
 .hero__overlay{
   position:absolute; inset:0;
   background:linear-gradient(180deg,rgba(255,255,255,.70),rgba(255,255,255,.92));
 }
 .hero--image .container{ position:relative; z-index:1 }
-.hero--image .headline{ color:#0b1220 }
-.hero--image .tagline{ color:#1f2937 }
 
 /* Layout blocks */
 .split{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:28px auto }
