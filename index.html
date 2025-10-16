@@ -123,72 +123,21 @@
       <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
     </div>
   </footer>
+  
+    <div class="card" style="text-align:center">
+      <img
+        src="https://quickchart.io/qr?text=https%3A%2F%2Fheadersiq.github.io%2Findex.html&size=220&margin=2&ecLevel=H&centerImageUrl=https%3A%2F%2Fheadersiq.github.io%2Fassets%2FHeadersIQ_logo_128.png&centerImageSizeRatio=0.24"
+        alt="QR code to HeadersIQ"
+        width="220" height="220"
+        style="display:block;margin:6px auto;border-radius:8px;border:1px solid var(--border)"
+      />
+      <p class="meta" style="margin-top:6px">
+        <a
+          href="https://quickchart.io/qr?text=https%3A%2F%2Fheadersiq.github.io%2Findex.html&size=1024&margin=8&ecLevel=H&centerImageUrl=https%3A%2F%2Fheadersiq.github.io%2Fassets%2FHeadersIQ_logo_128.png&centerImageSizeRatio=0.22"
+          class="button" download="HeadersIQ-QR-1024.png"
+        >Download high-res QR (PNG)</a>
+      </p>
+    </div>
 
-  <!-- keep this CDN include once on the page -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-          integrity="sha512-WZLxE8GOD9nA6mQx6yU/1hEwWm4m5mD4i1hQn9Tn5wqI6V5m1uD6jQ6rV3vKp9dG7n7a7V8Xh+Jr4mR3+4W9Wg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-  <script>
-  (function () {
-    const el = document.getElementById('qr');
-    if (!el) return;
-  
-    const url  = 'https://headersiq.github.io/index.html';
-    const size = 220; // QR size in px
-  
-    // Build a high-redundancy QR so a center logo still scans
-    el.innerHTML = '';
-    const qr = new QRCode(el, {
-      text: url,
-      width: size,
-      height: size,
-      colorDark: '#000000',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
-    });
-  
-    // Draw the logo into the QR canvas once it exists
-    function addLogo() {
-      const canvas = el.querySelector('canvas');
-      if (!canvas) return setTimeout(addLogo, 30);
-  
-      const ctx = canvas.getContext('2d');
-      const logo = new Image();
-      logo.src = 'assets/HeadersIQ_logo_128.png'; // your black/white logo
-      logo.onload = () => {
-        const logoSize = Math.round(size * 0.24); // ~24% of QR
-        const x = Math.round((size - logoSize) / 2);
-        const y = Math.round((size - logoSize) / 2);
-  
-        // white rounded pad behind the logo to keep contrast
-        const pad = 10, r = 14;
-        roundedRect(ctx, x - pad/2, y - pad/2, logoSize + pad, logoSize + pad, r);
-        ctx.fillStyle = '#ffffff';
-        ctx.fill();
-  
-        ctx.drawImage(logo, x, y, logoSize, logoSize);
-  
-        // optional: create a download link (PNG)
-        const dl = document.getElementById('qr-download');
-        if (dl) {
-          dl.href = canvas.toDataURL('image/png');
-          dl.download = 'headersiq-qr.png';
-        }
-      };
-    }
-    addLogo();
-  
-    function roundedRect(ctx, x, y, w, h, r) {
-      ctx.beginPath();
-      ctx.moveTo(x + r, y);
-      ctx.arcTo(x + w, y, x + w, y + h, r);
-      ctx.arcTo(x + w, y + h, x, y + h, r);
-      ctx.arcTo(x, y + h, x, y, r);
-      ctx.arcTo(x, y, x + w, y, r);
-      ctx.closePath();
-    }
-  })();
-  </script>
 </body>
 </html>
