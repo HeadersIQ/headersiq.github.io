@@ -46,7 +46,7 @@
       />
   
       <div class="intro-actions">
-        <a href="#enter" class="button primary" data-action="dismiss">Enter site</a>
+        <a href="javascript:void(0)" class="button primary" data-action="dismiss">Enter site</a>
         <a class="button" href="publications.html">See Publications</a>
       </div>
       <button class="intro-close" type="button" aria-label="Close intro" data-action="dismiss">×</button>
@@ -174,39 +174,39 @@
 
   <script>
   (function () {
-    const KEY = 'hiq_intro_seen_v1';
+    const KEY  = 'hiq_intro_seen_v1';
     const root = document.getElementById('intro-banner');
     if (!root) return;
   
-    // helpers
     const show = () => { root.hidden = false; document.body.style.overflow = 'hidden'; };
     const hide = () => { root.hidden = true;  document.body.style.overflow = '';    };
   
-    // First visit?
+    // Show only on first visit
     if (!localStorage.getItem(KEY)) show();
   
-    // One listener for both buttons (Enter + ×)
+    // Dismiss on "Enter site" or "×" (both have data-action="dismiss")
     root.addEventListener('click', function (e) {
-      const a = e.target.closest('[data-action="dismiss"]');
-      if (!a) return;
-      e.preventDefault();         // stops the "#enter" jump
+      const target = e.target.closest('[data-action="dismiss"]');
+      if (!target) return;
+      e.preventDefault();
       localStorage.setItem(KEY, '1');
       hide();
     });
   
-    // Close on ESC
+    // Dismiss on ESC
     document.addEventListener('keydown', (e) => {
       if (!root.hidden && e.key === 'Escape') {
         localStorage.setItem(KEY, '1'); hide();
       }
     });
   
-    // Click backdrop to close
+    // Dismiss when clicking the dark backdrop (outside the card)
     root.addEventListener('click', (e) => {
       if (e.target === root) { localStorage.setItem(KEY, '1'); hide(); }
     });
   })();
   </script>
+
 
 </body>
   
