@@ -144,6 +144,18 @@ a:hover{ text-decoration:underline }
 }
 @media (max-width:520px){ .intro-card{ width:96vw } .intro-actions{ flex-wrap:wrap } }
 
+/* Badges */
+.badge-new{
+  display:inline-block;
+  background:#3b82f6;   /* brand blue */
+  color:#fff;
+  font-weight:700;
+  font-size:12px;
+  line-height:1;
+  padding:4px 8px;
+  border-radius:999px;
+}
+
 /* Responsive */
 @media (max-width: 900px){
   .hero-grid{ grid-template-columns:1fr }
