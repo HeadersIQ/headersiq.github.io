@@ -59,15 +59,16 @@
   <h1>Videos & Audio</h1>
   <p>Conference talks, demos, and audio summaries (e.g., NotebookLM). Replace the placeholders below with your own links.</p>
 
+  <!-- NEW: Latest video -->
   <section class="card" id="notebooklm-video" style="margin-bottom:20px">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
       <h2 style="margin:0">Latest</h2>
       <span class="badge-new">New</span>
     </div>
-  
+
     <h3 style="margin-top:4px">Attribute-Based Data Quality — 6-min NotebookLM video</h3>
     <p class="meta" style="margin-top:0">A short narrative overview of the first paper.</p>
-  
+
     <video controls preload="metadata" playsinline width="100%"
            poster="assets/og-card.png"
            style="border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)">
@@ -79,7 +80,6 @@
       <a class="button" href="assets/videos/Attribute-Based_Data_Quality.mp4" download>
         Download video (MP4)
       </a>
-      <a class="button" href="#notebooklm-audio">Jump to audio summary</a>
     </div>
   </section>
 
@@ -92,19 +92,19 @@
       <p class="meta">YouTube • 2024</p>
     </div>
 
-
-    <div class="card">
-      <h3>NotebookLM - BDCAT paper excellent conversation! </h3>
+    <div class="card" id="notebooklm-audio">
+      <h3>NotebookLM - BDCAT paper excellent conversation!</h3>
       <audio controls preload="none">
         <source src="assets/Attribute-Based%20Semantic%20Type%20Detection%20and%20Data%20Quality%20Assessment.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <p class="meta"><a href="assets/Attribute-Based%20Semantic%20Type%20Detection%20and%20Data%20Quality%20Assessment.mp3" download>Download the MP3</a></p>
+      <p class="meta">
+        <a href="assets/Attribute-Based%20Semantic%20Type%20Detection%20and%20Data%20Quality%20Assessment.mp3" download>Download the MP3</a>
+      </p>
       <p style="margin-top:8px">
         <strong>What you’ll learn:</strong> the core idea, how bounded numerics catch impossible values, and why this beats black-box profiling for explainability.
       </p>
     </div>
-
 
     <div class="card">
       <h3>Upcoming Presentation - 2025</h3>
@@ -115,6 +115,7 @@
     </div>
   </div>
 </main>
+
 
 
 <footer class="site-footer">
