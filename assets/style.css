@@ -164,3 +164,28 @@ a:hover{ text-decoration:underline }
   .footer-grid{ grid-template-columns:1fr }
 }
 
+/* --- CLS and Performance Fixes (2025-11-05) --- */
+
+/* Prevent intro overlay from causing layout shift */
+.intro-banner {
+  position: fixed;
+  inset: 0;
+}
+.intro-card {
+  max-width: 980px;
+  width: 90%;
+  aspect-ratio: 16 / 9; /* Reserve space for the image */
+}
+
+/* Reserve space for video element */
+.video-wrapper,
+#notebooklm-video {
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #000; /* prevents flash of white before load */
+}
+
+/* Improve font stability */
+@font-face {
+  font-display: swap;
+}
