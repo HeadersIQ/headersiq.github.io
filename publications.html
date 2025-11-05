@@ -1,36 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
   <title>Publications - HeadersIQ</title>
-  
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="HeadersIQ - Attribute-centric data quality research (semantic type detection, HeadersIQ metric, datasets, publications, videos)." />
-<meta property="og:title" content="HeadersIQ - Research Hub" />
-<meta property="og:description" content="Papers, code, videos, and audio for HeadersIQ by Marcelo Valentim Silva." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="assets/og-card.png" />
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-<link rel="stylesheet" href="assets/style.css" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Project",
-  "name": "HeadersIQ",
-  "url": "https://headersiq.github.io/",
-  "description": "Attribute-centric data quality and semantic type detection research.",
-  "creator": {
-    "@type": "Person",
-    "name": "Marcelo Valentim Silva",
-    "affiliation": "Curtin University"
-  },
-  "sameAs": [
-    "https://github.com/HeadersIQ",
-    "https://github.com/HeadersIQ/HeadersIQ-main"
-  ]
-}
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HeadersIQ - Attribute-centric data quality research (semantic type detection, HeadersIQ metric, datasets, publications, videos)." />
 
+  <!-- icons / manifest (match other pages) -->
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/HeadersIQ_logo_180.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- social -->
+  <meta property="og:title" content="HeadersIQ - Research Hub" />
+  <meta property="og:description" content="Papers, code, videos, and audio for HeadersIQ by Marcelo Valentim Silva." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-card.png" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    "name": "HeadersIQ",
+    "url": "https://headersiq.github.io/",
+    "description": "Attribute-centric data quality and semantic type detection research.",
+    "creator": {
+      "@type": "Person",
+      "name": "Marcelo Valentim Silva",
+      "affiliation": "Curtin University"
+    },
+    "sameAs": [
+      "https://github.com/HeadersIQ",
+      "https://github.com/HeadersIQ/HeadersIQ-main"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -56,11 +65,13 @@
     HeadersIQ advances an <em>attribute-centric</em> approach to Semantic Type Detection and Data Quality.
     Start with the extended preprint for the full method and results; the BDCAT version is a short (6-page) snapshot.
   </p>
-    
+
   <h1>Publications</h1>
   <p>Peer-reviewed papers, preprints, and artefacts. Add DOIs and links to PDFs where available.</p>
 
   <div class="pub-list">
+
+    <!-- extended -->
     <article class="pub">
       <h3>Attribute-Based Semantic Type Detection and Data Quality Assessment (extended)</h3>
       <p>
@@ -68,7 +79,7 @@
         semantic-type classification (~23 types + bounded numerics),
         evaluation on <strong>50 datasets / 922 columns</strong>, and a
         comparison where the method detects <strong>81</strong> missing-value cases
-        vs <strong>1</strong> by YData Profiling. 
+        vs <strong>1</strong> by YData Profiling.
       </p>
       <p class="meta">
         Authors: Marcelo V. Silva, Hannes Herrmann, Valerie Maxville • Type: Preprint
@@ -82,27 +93,28 @@
       <details style="margin-top:10px">
         <summary>BibTeX</summary>
         <pre>
-    @misc{silva2024attribute,
-      title={Attribute-Based Semantic Type Detection and Data Quality Assessment},
-      author={Silva, Marcelo V. and Herrmann, Hannes and Maxville, Valerie},
-      year={2024},
-      eprint={2410.14692},
-      archivePrefix={arXiv},
-      primaryClass={cs.DB},
-      url={https://arxiv.org/abs/2410.14692}
-    }
+@misc{silva2024attribute,
+  title={Attribute-Based Semantic Type Detection and Data Quality Assessment},
+  author={Silva, Marcelo V. and Herrmann, Hannes and Maxville, Valerie},
+  year={2024},
+  eprint={2410.14692},
+  archivePrefix={arXiv},
+  primaryClass={cs.DB},
+  url={https://arxiv.org/abs/2410.14692}
+}
         </pre>
       </details>
     </article>
-    
-    <!-- === BDCAT 2024 (short) === -->
+
+    <!-- BDCAT -->
     <article class="pub">
-      <h3>Attribute-Based Semantic Type Detection and Data Quality Assessment (short)
-          <span class="badge-new" style="margin-left:8px">Honourable Mention</span> 
+      <h3>
+        Attribute-Based Semantic Type Detection and Data Quality Assessment (short)
+        <span class="badge-new" style="margin-left:8px">Honourable Mention</span>
       </h3>
       <p>
-        Short, six-page version presented at the 2024 IEEE/ACM International Conference on Big Data Computing, Applications and Technologies (BDCAT). Focuses on the
-        attribute-based idea and initial evaluation related to BIG DATA.
+        Short, six-page version presented at the 2024 IEEE/ACM International Conference on Big Data Computing,
+        Applications and Technologies (BDCAT). Focuses on the attribute-based idea and initial evaluation.
       </p>
       <p class="meta">
         Authors: Marcelo V. Silva, Hannes Herrmann, Valerie Maxville • Venue: IEEE BDCAT 2024 • Type: Short paper
@@ -115,9 +127,9 @@
         <a class="button" href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener">Code</a>
       </div>
     </article>
-      </div>
-    </main>
 
+  </div>
+</main>
 
 <footer class="site-footer">
   <div class="container">
@@ -135,38 +147,21 @@
         </ul>
       </div>
       <div>
-          <h4>QR to this site</h4>
-          <small class="meta">Point your phone camera to open this homepage.</small>
-          <div class="footer-qr">
-            <img
-              src="https://quickchart.io/qr?text=https%3A%2F%2Fheadersiq.github.io%2Findex.html&size=128&margin=2&ecLevel=H&centerImageUrl=https%3A%2F%2Fheadersiq.github.io%2Fassets%2FHeadersIQ_logo_128.png&centerImageSizeRatio=0.24"
-              alt="QR code to HeadersIQ" width="128" height="128"
-            />
-          </div>
+        <h4>QR to this site</h4>
+        <small class="meta">Point your phone camera to open this homepage.</small>
+        <div class="footer-qr">
+          <img
+            src="https://quickchart.io/qr?text=https%3A%2F%2Fheadersiq.github.io%2Findex.html&size=128&margin=2&ecLevel=H&centerImageUrl=https%3A%2F%2Fheadersiq.github.io%2Fassets%2FHeadersIQ_logo_128.png&centerImageSizeRatio=0.24"
+            alt="QR code to HeadersIQ" width="128" height="128">
         </div>
+      </div>
     </div>
-    <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-WZLxE8GOD9nA6mQx6yU/1hEwWm4m5mD4i1hQn9Tn5wqI6V5m1uD6jQ6rV3vKp9dG7n7a7V8Xh+Jr4mR3+4W9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-  (function(){
-    var el = document.getElementById('qr');
-    if (!el) return;
-    var base = location.origin + location.pathname.replace(/[^\/]*$/, 'index.html');
-    new QRCode(el, { text: base, width: 96, height: 96 });
-  })();
-</script>
-
-<footer class="site-footer">
-  <div class="container">
     <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
   </div>
 </footer>
 
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "c291acc56fdb4dfe803bb98d1b3077bb"}'></script>
 <!-- End Cloudflare Web Analytics -->
 
