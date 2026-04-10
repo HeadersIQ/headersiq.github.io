@@ -4,23 +4,25 @@
   <meta charset="utf-8" />
   <title>HeadersIQ - Research Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="HeadersIQ uses column headers as semantic signposts to detect types and surface data-quality issues early—explainably. Evaluated on 50 datasets / 922 columns." />
+  <meta name="description" content="HeadersIQ uses column headers as semantic signposts to detect types and surface data-quality issues early, explainably. Evaluated on 50 datasets / 922 columns." />
+  <meta name="theme-color" content="#0b1220" />
+
   <meta property="og:title" content="HeadersIQ - Research Hub" />
   <meta property="og:description" content="Papers, code, videos, and audio for HeadersIQ by Marcelo Valentim Silva." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://headersiq.github.io/" />
   <meta property="og:image" content="assets/og-card.png" />
 
+  <link rel="canonical" href="https://headersiq.github.io/" />
   <link rel="manifest" href="assets/site.webmanifest">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/HeadersIQ_logo_180.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!-- Preload key images for performance -->
   <link rel="preload" as="image" href="assets/images/hey-do-you-trust-your-data-small.png">
   <link rel="preload" as="image" href="assets/images/Nasa-Gulf-Coast-at-night.webp">
 
-  <!-- IMPORTANT: bump version so the hero background shows -->
   <link rel="stylesheet" href="assets/style.css?v=10">
   <script src="assets/site.js?v=3" defer></script>
 
@@ -31,8 +33,15 @@
     "name": "HeadersIQ",
     "url": "https://headersiq.github.io/",
     "description": "Attribute-centric data quality and semantic type detection research.",
-    "creator": { "@type": "Person", "name": "Marcelo Valentim Silva", "affiliation": "Curtin University" },
-    "sameAs": ["https://github.com/HeadersIQ","https://github.com/HeadersIQ/HeadersIQ-main"]
+    "creator": {
+      "@type": "Person",
+      "name": "Marcelo Valentim Silva",
+      "affiliation": "Curtin University"
+    },
+    "sameAs": [
+      "https://github.com/HeadersIQ",
+      "https://github.com/HeadersIQ/HeadersIQ-main"
+    ]
   }
   </script>
 </head>
@@ -40,169 +49,182 @@
   <!-- First-visit intro overlay -->
   <div id="intro-banner" class="intro-banner" hidden>
     <div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="introTitle">
-      <button class="intro-close" type="button" aria-label="Close intro">×</button>
-  
+      <button class="intro-close" type="button" aria-label="Close intro" onclick="hideIntro()">×</button>
+
       <img
         src="assets/images/hey-do-you-trust-your-data-small.png"
-        alt="HEY — Do you trust your data? If not, do you want to quickly assess its quality?"
-        class="intro-img" loading="eager"
+        alt="HEY - Do you trust your data? If not, do you want to quickly assess its quality?"
+        class="intro-img"
+        loading="eager"
       />
-  
+
       <div class="intro-actions">
         <button class="button primary" type="button" onclick="hideIntro()">Enter site</button>
         <a class="button" href="publications.html">See Publications</a>
       </div>
-      <button class="intro-close" type="button" aria-label="Close intro" onclick="hideIntro()">×</button>
-
     </div>
   </div>
 
-   <script>
-    function hideIntro(){
+  <script>
+    function hideIntro() {
       var el = document.getElementById('intro-banner');
-      if (el){
-        el.style.display = 'none';           // hide the overlay
-        document.body.style.overflow = '';   // re-enable page scroll
+      if (el) {
+        el.style.display = 'none';
+        document.body.style.overflow = '';
       }
     }
+
     (function () {
       var el = document.getElementById('intro-banner');
       if (!el) return;
-      document.addEventListener('keydown', function(e){
+
+      document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') hideIntro();
       });
-      el.addEventListener('click', function(e){
-        if (e.target === el) hideIntro();    // click backdrop to close
+
+      el.addEventListener('click', function (e) {
+        if (e.target === el) hideIntro();
       });
     })();
   </script>
 
-  <!-- Header / Nav goes first -->
+  <!-- Replace RUNNER_URL below with your public runner URL -->
+  <!-- Example: https://your-runner-url.example.com -->
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Read headers → reveal data quality">
+      <a class="brand" href="index.html" aria-label="Read headers to reveal data quality">
         <img class="brand-mark" src="assets/HeadersIQ_logo_32.png" alt="HeadersIQ logo" width="28" height="28">
         <span class="brand-text">Super spell-checker for your data</span>
       </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="publications.html">Publications</a>
         <a href="videos.html">Videos & Audio</a>
         <a href="about.html">About</a>
         <a class="button" href="#award-2025" style="background:#f5f7fb;border-color:#d9e1ee">🏅 Award</a>
-        <a class="button primary" href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener">Source Code</a>
+        <a class="button" href="RUNNER_URL" target="_blank" rel="noopener noreferrer">Runner</a>
+        <a class="button primary" href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener noreferrer">Source Code</a>
       </nav>
     </div>
   </header>
 
-  <!-- SINGLE HERO with NASA background -->
+  <main id="main-content">
     <section class="hero hero--image">
-    <img class="hero-bg" src="assets/images/Nasa-Gulf-Coast-at-night.webp" alt="NASA – Gulf Coast at night">
-    <div class="container">
-      <h1 class="headline">HeadersIQ</h1>
-      <p class="tagline">We read column <em>headers</em> as semantic signposts - so data quality issues reveal themselves fast and explainably.</p>
-      <div class="cta">
-        <a class="button primary" href="publications.html">See Publications</a>
-        <a class="button" href="videos.html#notebooklm-audio">Listen: 15-min excellent conversation overview!!</a>
-        <a class="button" href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener">Source Code</a>
+      <img
+        class="hero-bg"
+        src="assets/images/Nasa-Gulf-Coast-at-night.webp"
+        alt="NASA Gulf Coast at night"
+        loading="eager"
+        fetchpriority="high"
+      >
+      <div class="container">
+        <h1 class="headline">HeadersIQ</h1>
+        <p class="tagline">We read column <em>headers</em> as semantic signposts - so data quality issues reveal themselves fast and explainably.</p>
+        <div class="cta">
+          <a class="button primary" href="publications.html">See Publications</a>
+          <a class="button" href="videos.html#notebooklm-audio">Listen: 15-min excellent conversation overview!!</a>
+          <a class="button" href="RUNNER_URL" target="_blank" rel="noopener noreferrer">Open Runner</a>
+          <a class="button" href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener noreferrer">Source Code</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Award highlight -->
-  <section class="card" id="award-2025" style="margin-bottom:20px">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-      <h2 style="margin:0">Latest</h2>
-      <span class="badge-new">Award</span>
-    </div>
-  
-    <h3 style="margin-top:4px">Honourable Mention — EECMS HDR Forum (Curtin University)</h3>
-    <p class="meta" style="margin-top:0">
-      Recognised for the paper <em>“Attribute-Based Semantic Type Detection and Data Quality Assessment”</em> (IEEE/ACM BDCAT 2024).
-    </p>
-  
-    <div class="links" style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
-      <a class="button" href="assets/pdfs/honourable-mention-bdcat-eecms-hdr-forum-2025.pdf" target="_blank" rel="noopener">View certificate (PDF)</a>
-      <a class="button" href="assets/pdfs/BDCAT%20Attribute-Based%20Semantic%20Type%20Detection%20and%20Data%20Quality%20Assessment.pdf" target="_blank" rel="noopener">See the IEEE BDCAT 2024 paper</a>
-    </div>
-  
-  </section>
+    <section class="card" id="award-2025" style="margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <h2 style="margin:0">Latest</h2>
+        <span class="badge-new">Award</span>
+      </div>
 
-  
-  <!-- Highlight strip -->
-  <section class="container">
-    <div class="card" style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <div><strong>New:</strong> NotebookLM conversation that distills the whole idea in minutes.</div>
-      <a class="button" href="videos.html#notebooklm-audio">Play the audio</a>
-    </div>
-  </section>
+      <h3 style="margin-top:4px">Honourable Mention - EECMS HDR Forum (Curtin University)</h3>
+      <p class="meta" style="margin-top:0">
+        Recognised for the paper <em>“Attribute-Based Semantic Type Detection and Data Quality Assessment”</em> (IEEE/ACM BDCAT 2024).
+      </p>
 
-  <!-- Three-up cards -->
-  <section class="container split">
-    <div class="card">
-      <h3>Now</h3>
-      <p>Preparing the next talk & demo; refining the headers dictionary; expanding bounded-numeric checks; and drafting thesis chapters.</p>
-    </div>
-    <div class="card">
-      <h3>Highlights</h3>
-      <ul>
-        <li>Explainable header-centric CTA with compact type set.</li>
-        <li>Evaluation on <strong>50 datasets / 922 columns</strong>.</li>
-        <li>Detected <strong>81</strong> hidden-missing cases vs <strong>1</strong> by a popular profiler.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="publications.html">Publications list</a></li>
-        <li><a href="videos.html#notebooklm-audio">Audio: 15-min overview</a></li>
-        <li><a href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener">GitHub repository</a></li>
-      </ul>
-    </div>
-  </section>
+      <div class="links" style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="button" href="assets/pdfs/honourable-mention-bdcat-eecms-hdr-forum-2025.pdf" target="_blank" rel="noopener noreferrer">View certificate (PDF)</a>
+        <a class="button" href="assets/pdfs/BDCAT%20Attribute-Based%20Semantic%20Type%20Detection%20and%20Data%20Quality%20Assessment.pdf" target="_blank" rel="noopener noreferrer">See the IEEE BDCAT 2024 paper</a>
+      </div>
+    </section>
 
-  <!-- Footer -->
+    <section class="container">
+      <div class="card" style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div><strong>New:</strong> NotebookLM conversation that distills the whole idea in minutes.</div>
+        <a class="button" href="videos.html#notebooklm-audio">Play the audio</a>
+      </div>
+    </section>
+
+    <section class="container split">
+      <div class="card">
+        <h3>Now</h3>
+        <p>Preparing the next talk & demo; refining the headers dictionary; expanding bounded-numeric checks; and drafting thesis chapters.</p>
+      </div>
+
+      <div class="card">
+        <h3>Highlights</h3>
+        <ul>
+          <li>Explainable header-centric CTA with compact type set.</li>
+          <li>Evaluation on <strong>50 datasets / 922 columns</strong>.</li>
+          <li>Detected <strong>81</strong> hidden-missing cases vs <strong>1</strong> by a popular profiler.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="publications.html">Publications list</a></li>
+          <li><a href="videos.html#notebooklm-audio">Audio: 15-min overview</a></li>
+          <li><a href="RUNNER_URL" target="_blank" rel="noopener noreferrer">Open HeadersIQ Runner</a></li>
+          <li><a href="https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <h4>HeadersIQ</h4>
           <p>Attribute-centric data quality research by Marcelo Valentim Silva.</p>
-          <p class="meta">Image credit: NASA – Earth at night (Gulf Coast).</p>
+          <p class="meta">Image credit: NASA - Earth at night (Gulf Coast).</p>
         </div>
+
         <div>
           <h4>Links</h4>
           <ul>
-            <li><a href="https://www.linkedin.com/in/marcelovalentimsilva/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/HeadersIQ" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.kaggle.com/marcelovalentimsilva" target="_blank" rel="noopener">Kaggle</a></li>
+            <li><a href="https://www.linkedin.com/in/marcelovalentimsilva/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/HeadersIQ" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.kaggle.com/marcelovalentimsilva" target="_blank" rel="noopener noreferrer">Kaggle</a></li>
           </ul>
         </div>
+
         <div>
           <h4>QR to this site</h4>
           <small class="meta">Point your phone camera to open this homepage.</small>
           <div class="footer-qr">
             <img
               src="https://quickchart.io/qr?text=https%3A%2F%2Fheadersiq.github.io%2Findex.html&size=128&margin=2&ecLevel=H&centerImageUrl=https%3A%2F%2Fheadersiq.github.io%2Fassets%2FHeadersIQ_logo_128.png&centerImageSizeRatio=0.24"
-              alt="QR code to HeadersIQ" width="128" height="128"
+              alt="QR code to HeadersIQ"
+              width="128"
+              height="128"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
+
       <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
     </div>
   </footer>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="copy">© <span id="year"></span> HeadersIQ • Built with GitHub Pages</div>
-  </div>
-</footer>
-
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "c291acc56fdb4dfe803bb98d1b3077bb"}'></script>
-<!-- End Cloudflare Web Analytics -->
-
+  <!-- Cloudflare Web Analytics -->
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "c291acc56fdb4dfe803bb98d1b3077bb"}'>
+  </script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
