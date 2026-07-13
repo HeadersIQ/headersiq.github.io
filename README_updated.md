@@ -33,7 +33,7 @@ Users can:
 - follow execution progress;
 - download the generated assessment outputs.
 
-Supported local tabular formats include CSV, TSV, TXT, DATA, Excel, JSON, JSONL, and Parquet.
+Supported local tabular formats include CSV, TXT, DATA, Excel, TSV, JSON, JSONL, and Parquet.
 
 The Code Runner is available at:
 
@@ -69,8 +69,6 @@ Publication details and supporting artefacts are available on the website's Publ
 
 ## Related Resources
 
-- **HeadersIQ GitHub organisation:** https://github.com/HeadersIQ
-- **Research code repository:** https://github.com/marcelovalentimsilva/Attribute-Based-Semantic-Type-Detection-and-Data-Quality-Assessment
 - **Kaggle profile:** https://www.kaggle.com/marcelovalentimsilva
 
 ## Researcher
