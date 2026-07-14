@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HeadersIQ Code Runner User Guide</title>
+
+    <meta
+        name="description"
+        content="HeadersIQ Code Runner User Guide"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f6fb;
+            color: #10213a;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+        .page-header {
+            padding: 24px;
+            background: #ffffff;
+            border-bottom: 1px solid #d9e1ec;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: 30px;
+        }
+
+        .page-header p {
+            margin: 0 0 18px;
+            color: #52647c;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 170px);
+            min-height: 700px;
+            padding: 18px;
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d9e1ec;
+            border-radius: 14px;
+            background: #ffffff;
+        }
+
+        .fallback {
+            margin: 30px auto;
+            max-width: 760px;
+            padding: 24px;
+            background: #ffffff;
+            border: 1px solid #d9e1ec;
+            border-radius: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>HeadersIQ Code Runner User Guide</h1>
+
+        <p>
+            Instructions for running local and Kaggle tabular datasets
+            through the HeadersIQ pipeline.
+        </p>
+
+        <a
+            class="button"
+            href="assets/pdfs/HeadersIQ-Code-Runner-User-Guide.pdf"
+            target="_blank"
+            rel="noopener"
+        >
+            Open or download the PDF User Guide
+        </a>
+    </header>
+
+    <main class="pdf-container">
+        <object
+            class="pdf-frame"
+            data="assets/pdfs/HeadersIQ-Code-Runner-User-Guide.pdf"
+            type="application/pdf"
+        >
+            <div class="fallback">
+                <p>
+                    Your browser cannot display the PDF inside this page.
+                </p>
+
+                <a
+                    class="button"
+                    href="assets/pdfs/HeadersIQ-Code-Runner-User-Guide.pdf"
+                >
+                    Open the PDF User Guide
+                </a>
+            </div>
+        </object>
+    </main>
+</body>
+</html>
